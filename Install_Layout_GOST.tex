@@ -1,14 +1,14 @@
 \documentclass[14pt]{extreport}
 \usepackage{ifluatex}
 \ifluatex
-\usepackage{fontspec}
-\setmainfont{Literaturnaya}
-\setsansfont{Segoe UI}
-\setmonofont{MesloLGS Nerd Font Mono}
+    \usepackage{fontspec}
+    \setmainfont{Literaturnaya}
+    \setsansfont{Segoe UI}
+    \setmonofont{MesloLGS Nerd Font Mono}
 \else
-\usepackage[utf8]{inputenc}
-\usepackage[T1,T2A]{fontenc}
-\usepackage{literat}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1,T2A]{fontenc}
+    \usepackage{literat}
 \fi
 \usepackage[russian]{babel}
 \usepackage[os=win]{menukeys}
@@ -61,23 +61,25 @@
 	\begin{figure}
 		\vspace{-7ex}
 		\includegraphics[width=185mm]{Layout-GOST_Title}
-		\label{Layout-GOST_Title}
 	\end{figure}
 
 \end{titlepage}
+
 \clearpage
+
 \begin{doublespace}
-	\tableofcontents
+    \tableofcontents
 \end{doublespace}
 
 \newpage
 
 \section{Описание}
-\label{Opisanie}
+~\label{Opisanie}
 
 Набор шаблонов и блоков (scrapbooks) Layout для оформления конструкторской документации согласно стандартам ЕСКД и СПДС включает:
 
 \subsection{ЕСКД--шаблоны}
+
 \begin{enumerate}
 	\item Чертежи. Формат: А4, А3, А2. Ориентация листов альбомная (\textsf{L\_CHERTEZH}) и книжная (\textsf{P\_CHERTEZH}). Основная надпись по ГОСТ~2.104--2006 (Формы 1, 2 и 2а).
 	\item Титульный лист А4 (\textsf{P\_TIT\_LIST}) по ГОСТ~2.105--95.
@@ -85,15 +87,16 @@
 	\item Групповая спецификация А4 (\textsf{L\_SPECIF\_GROUP}), Групповая ведомость спецификаций А4  (\textsf{L\_VEDOMOST\_SPECIF\_GROUP}), Групповая ведомость ссылочных документов А4 (\textsf{L\_VEDOMOST\_DOC\_GROUP}) по ГОСТ~2.113--75 (Формы 1 и 1а, 3 и 3а соответственно).  Основная надпись по ГОСТ~2.104--2006 (Формы 2 и 2а).
 	\item Шаблоны без основной надписи (\textsf{EMPTY}).
 \end{enumerate}
+
 \subsection{СПДС--шаблоны}
 
 Оформлены согласно ГОСТ~21.1101--2013.
 \begin{enumerate}
-	\item Строительные чертежи основных комплектов. Формат А3, А2, А1 (\textsf{OSN\_DOC}). Ориентация альбомная (Приложение "<Ж">, формы 3 и 6).
-	\item Строительные изделия. Формат А3, А2, А1 (\textsf{STR\_IZD}). Ориентация альбомная (Приложение "<Ж">, формы 4 и 6).
-	\item Текстовых документов А4 (\textsf{P\_TEXT\_DOC}). Ориентация листов книжная (Приложение "<Ж">, формы 5 и 6).
-	\item Обложка А4 (\textsf{OBLOZHKA}). Ориентация книжная (Приложение "<Н">, форма 12).
-	\item Титульный лист А4 (\textsf{TIT\_LIST}).Ориентация книжная (Приложение "<П">, форма 13).
+	\item Строительные чертежи основных комплектов. Формат А3, А2, А1 (\textsf{OSN\_DOC}). Ориентация альбомная (Приложение «Ж», формы 3 и 6).
+	\item Строительные изделия. Формат А3, А2, А1 (\textsf{STR\_IZD}). Ориентация альбомная (Приложение «Ж», формы 4 и 6).
+	\item Текстовых документов А4 (\textsf{P\_TEXT\_DOC}). Ориентация листов книжная (Приложение «Ж», формы 5 и 6).
+	\item Обложка А4 (\textsf{OBLOZHKA}). Ориентация книжная (Приложение «Н», форма 12).
+	\item Титульный лист А4 (\textsf{TIT\_LIST}).Ориентация книжная (Приложение «П», форма 13).
 	\item Шаблоны без основной надписи (\textsf{EMPTY}).
 \end{enumerate}
 
@@ -147,15 +150,13 @@
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{ESKD_NEW_FILE}
-	\caption{Выбор шаблона ЕСКД}
-	\label{ESKD_NEW_FILE}
+    \caption{Выбор шаблона ЕСКД.\label{ESKD_NEW_FILE}}
 \end{figure}
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{SPDS_NEW_FILE}
-	\caption{Выбор шаблона СПДС}
-	\label{SPDS_NEW_FILE}
+    \caption{Выбор шаблона СПДС.\label{SPDS_NEW_FILE}}
 \end{figure}
 \clearpage
 
@@ -164,13 +165,13 @@
 \noindent
 \menu[,]{Pages,Add} \\
 
-\textbf{\emph{Примечание.}} Для шаблонов строительных чертежей основных комплектов (\textsf{OSN\_DOC}) необходимо копировать на новый лист содержимое слоя \textsf{OSNOVNAJA\_NADPIS\_VIEW}, который включает тег в графе 4 по форме 5 (\textsf{<Name\_View>} --- Наименование изображений помещенном на данном листе) и заполнять для каждого листа отдельно, изменив название самого тега, например \textsf{Name\_View\_Page}, где "<\textsf{Page}"> это номер страницы. Подробнее работа с тегами в данных шаблонах описана ниже.\\
+\textbf{\emph{Примечание.}} Для шаблонов строительных чертежей основных комплектов (\textsf{OSN\_DOC}) необходимо копировать на новый лист содержимое слоя \textsf{OSNOVNAJA\_NADPIS\_VIEW}, который включает тег в графе 4 по форме 5 (\textsf{<Name\_View>} --- Наименование изображений помещенном на данном листе) и заполнять для каждого листа отдельно, изменив название самого тега, например \textsf{Name\_View\_Page}, где «\textsf{Page}» это номер страницы. Подробнее работа с тегами в данных шаблонах описана ниже.\\
 
 Также в документах используются служебные слои. Названия слоев информируют об объектах, которые расположены на них. По умолчанию эти слои заблокированы.\\
-Для заполнения \textbf{технических требований}, если таковые имеются, необходимо разблокировать слой "<\textsf{TEH\_TREBOVANIJA}">. Для перехода к следующему пункту жмем \keys{\enter}. Смена строки в текущем пункте происходит автоматически и определяется шириной блока текста.
+Для заполнения \textbf{технических требований}, если таковые имеются, необходимо разблокировать слой «\textsf{TEH\_TREBOVANIJA}». Для перехода к следующему пункту жмем \keys{\enter}. Смена строки в текущем пункте происходит автоматически и определяется шириной блока текста.
 Новые строки добавляются снизу. Первая  строка постоянно перемещается вверх.  Поэтому, для отображения всего, нужно сдвигать \textbf{только} верхнюю границу этого текстового блока. Слой рекомендуется заблокировать после ввода текста.\\
 
-Для остальных полей применяется способ заполнения с помощью тегов ("<Auto-Text tags">)\footnote{\href{https://help.sketchup.com/en/layout/typing-importing-or-auto-inserting-text}{\uline{https://help.sketchup.com/en/layout/typing-importing-or-auto-inserting-text}}}. Их содержимое генерируется как автоматически (для номеров страниц, названий страниц) так и вводится вручную. Список тегов для каждого конкретного документа можно посмотреть в свойствах:\\
+Для остальных полей применяется способ заполнения с помощью тегов («Auto-Text tags»)\footnote{\href{https://help.sketchup.com/en/layout/typing-importing-or-auto-inserting-text}{\uline{https://help.sketchup.com/en/layout/typing-importing-or-auto-inserting-text}}}. Их содержимое генерируется как автоматически (для номеров страниц, названий страниц) так и вводится вручную. Список тегов для каждого конкретного документа можно посмотреть в свойствах:\\
 
 \noindent
 \menu[,]{File,{Document Setup~\ldots},Auto-Text}\\
@@ -183,8 +184,8 @@
 {\small \directory{Layout-GOST/Example\_PDF/Templates}}
 
 \subsection{Scrapbooks}
-В процессе оформления чертежа необходимо использовать блоки способом перетаскивания на лист документа ("<Drag and Drop">). При копировании свойств объектов из палитры \textsf{GOST\_SDPS} применяют инструмент \textsf{Style} ("<Пипетка">).
-Все обозначение, кроме текстовых знаков, являются группой. Редактировать группу можно стандартными методами LayOut. Это перемещение объектов, масштабирование, изменения положения характерных точек линий ("<Двойной клик"> по линии), стрелок, цвета, толщины и т.д.\\
+В процессе оформления чертежа необходимо использовать блоки способом перетаскивания на лист документа («Drag and Drop»). При копировании свойств объектов из палитры \textsf{GOST\_SDPS} применяют инструмент \textsf{Style} («Пипетка»).
+Все обозначение, кроме текстовых знаков, являются группой. Редактировать группу можно стандартными методами LayOut. Это перемещение объектов, масштабирование, изменения положения характерных точек линий («Двойной клик» по линии), стрелок, цвета, толщины и т.д.\\
 Основные надписи, которые включены в Scrapbooks, имеют аналогичные теги, что и соответствующие формы шаблонов ЕСКД (Приложение~\ref{APP:ESKD}) и СПДС~(Приложение~\ref{APP:SPDS}).\\
 :
 Посмотреть примеры \textit{Scrapbooks} в формате \emph{PDF} можно в каталоге по адресу:\\
@@ -195,22 +196,20 @@
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.35\textwidth]{ESKD_Point_1}
-	\caption{Характерные точки линии}
-	\label{ESKD_Point_1}
+    \caption{Характерные точки линии.\label{ESKD_Point_1}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.35\textwidth]{ESKD_Point_2}
-	\caption{Характерные точки линии после изменения положения}
-	\label{ESKD_Point_2}
+    \caption{Характерные точки линии после изменения положения.\label{ESKD_Point_2}}
 \end{figure}
 
 
 \appendix
 
 \chapter{ЕСКД. Список тегов в шаблонах}
-\label{APP:ESKD}
+~\label{APP:ESKD}
 
 \subsubsection{ГОСТ~2.104--2006}
 \noindent
@@ -225,51 +224,44 @@
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{ESKD_CHERTEZH}
-	\caption{Формы 1 и 2а. Список тегов основной надписи}
-	\label{ESKD_CHERTEZH}
+	\caption{Формы 1 и 2а. Список тегов основной надписи.\label{ESKD_CHERTEZH}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{ESKD_CHERTEZH_without_tagname}
-	\caption{Формы 1 и 2а. Заполнение граф основной надписи.}
-	\label{ESKD_CHERTEZH_without_tagname}
+    \caption{Формы 1 и 2а. Заполнение граф основной надписи.\label{ESKD_CHERTEZH_without_tagname}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{ESKD_CHERTEZH_with_tagname}
-	\caption{Формы 1 и 2а. Соответствующие теги в графах основной надписи.}
-	\label{ESKD_CHERTEZH_with_tagname}
+	\caption{Формы 1 и 2а. Соответствующие теги в графах основной надписи.\label{ESKD_CHERTEZH_with_tagname}}
 \end{figure}
 
 %Рисунки по Форме 2
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{ESKD_TEXT_DOC}
-	\caption{Формы 2 и 2а. Список тегов основной надписи}
-	\label{ESKD_TEXT_DOC}
+    \caption{Формы 2 и 2а. Список тегов основной надписи.\label{ESKD_TEXT_DOC}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{ESKD_TEXT_DOC_without_tagname}
-	\caption{Формы 2 и 2а. Заполнение граф основной надписи.}
-	\label{ESKD_TEXT_DOC_without_tagname}
+	\caption{Формы 2 и 2а. Заполнение граф основной надписи.\label{ESKD_TEXT_DOC_without_tagname}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{ESKD_TEXT_DOC_with_tagname}
-	\caption{Формы 2 и 2а. Соответствующие теги в графах основной надписи.}
-	\label{ESKD_TEXT_DOC_with_tagname}
+    \caption{Формы 2 и 2а. Соответствующие теги в графах основной надписи.\label{ESKD_TEXT_DOC_with_tagname}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{ESKD_EMPTY}
-	\caption{Список тегов шаблона без основной надписи}
-	\label{ESKD_EMPTY}
+	\caption{Список тегов шаблона без основной надписи\label{ESKD_EMPTY}}
 \end{figure}
 \clearpage
 
@@ -278,26 +270,23 @@
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{ESKD_TIT_LIST}
-	\caption{Титульный лист. Список тегов}
-	\label{ESKD_TIT_LIST}
+    \caption{Титульный лист. Список тегов.\label{ESKD_TIT_LIST}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{ESKD_TIT_LIST_without_tagname}
-	\caption{Титульный лист. Заполнение граф}
-	\label{ESKD_TIT_LIST_without_tagname}
+    \caption{Титульный лист. Заполнение граф.\label{ESKD_TIT_LIST_without_tagname}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{ESKD_TIT_LIST_with_tagname}
-	\caption{Титульный лист. Соответствующие теги в графах}
-	\label{ESKD_TIT_LIST_with_tagname}
+    \caption{Титульный лист. Соответствующие теги в графах.\label{ESKD_TIT_LIST_with_tagname}}
 \end{figure}
 
 \chapter{СПДС. Список тегов в шаблонах}
-\label{APP:SPDS}
+~\label{APP:SPDS}
 
 \subsubsection{ГОСТ~21.1101--2013}
 \noindent
@@ -317,117 +306,101 @@
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{SPDS_OSN_DOC}
-	\caption{Форма 3. Список тегов основной надписи}
-	\label{SPDS_OSN_DOC}
+    \caption{Форма 3. Список тегов основной надписи.\label{SPDS_OSN_DOC}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{SPDS_OSN_DOC_without_tagname}
-	\caption{Форма 3. Заполнение граф основной надписи}
-	\label{SPDS_OSN_DOC_without_tagname}
+    \caption{Форма 3. Заполнение граф основной надписи.\label{SPDS_OSN_DOC_without_tagname}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{SPDS_OSN_DOC_with_tagname}
-	\caption{Форма 3. Соответствующие теги в графах основной надписи}
-	\label{SPDS_OSN_DOC_with_tagname}
+    \caption{Форма 3. Соответствующие теги в графах основной надписи.\label{SPDS_OSN_DOC_with_tagname}}
 \end{figure}
 
 %Рисунки по Формах 4 и 6
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{SPDS_STR_IZD}
-	\caption{Формы 4 и 6. Список тегов основной надписи}
-	\label{SPDS_STR_IZD}
+    \caption{Формы 4 и 6. Список тегов основной надписи.\label{SPDS_STR_IZD}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{SPDS_STR_IZD_without_tagname}
-	\caption{Формы 4 и 6. Заполнение граф основной надписи.}
-	\label{SPDS_STR_IZD_without_tagname}
+    \caption{Формы 4 и 6. Заполнение граф основной надписи.\label{SPDS_STR_IZD_without_tagname}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{SPDS_STR_IZD_with_tagname}
-	\caption{Формы 4 и 6. Соответствующие теги в графах основной надписи.}
-	\label{SPDS_STR_IZD_with_tagname}
+	\caption{Формы 4 и 6. Соответствующие теги в графах основной надписи.\label{SPDS_STR_IZD_with_tagname}}
 \end{figure}
 
 %%Рисунки по Форме 5
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{SPDS_TEXT_DOC}
-	\caption{Форма 5. Список тегов основной надписи}
-	\label{SPDS_TEXT_DOC}
+	\caption{Форма 5. Список тегов основной надписи.\label{SPDS_TEXT_DOC}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{SPDS_TEXT_DOC_without_tagname}
-	\caption{Формы 5. Заполнение граф основной надписи.}
-	\label{SPDS_TEXT_DOC_without_tagname}
+	\caption{Формы 5. Заполнение граф основной надписи.\label{SPDS_TEXT_DOC_without_tagname}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{SPDS_TEXT_DOC_with_tagname}
-	\caption{Формы 5. Соответствующие теги в графах основной надписи.}
-	\label{SPDS_TEXT_DOC_with_tagname}
+    \caption{Формы 5. Соответствующие теги в графах основной надписи.\label{SPDS_TEXT_DOC_with_tagname}}
 \end{figure}
 
 %Рисунки по Форме 12
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{SPDS_OBLOZHKA}
-	\caption{Форма 12. Список тегов обложки}
-	\label{SPDS_OBLOZHKA}
+	\caption{Форма 12. Список тегов обложки.\label{SPDS_OBLOZHKA}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{SPDS_OBLOZHKA_without_tagname}
-	\caption{Форма 12. Заполнение граф обложки}
-	\label{SPDS_OBLOZHKA_without_tagname}
+    \caption{Форма 12. Заполнение граф обложки.\label{SPDS_OBLOZHKA_without_tagname}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{SPDS_OBLOZHKA_with_tagname}
-	\caption{Форма 12. Соответствующие теги в графах обложки}
-	\label{SPDS_OBLOZHKA_with_tagname}
+	\caption{Форма 12. Соответствующие теги в графах обложки.\label{SPDS_OBLOZHKA_with_tagname}}
 \end{figure}
 
 %Рисунки по Форме 13
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{SPDS_TIT_LIST}
-	\caption{Форма 13. Список тегов титульного листа}
-	\label{SPDS_TIT_LIST}
+    \caption{Форма 13. Список тегов титульного листа.\label{SPDS_TIT_LIST}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{SPDS_TIT_LIST_without_tagname}
-	\caption{Форма 13. Заполнение граф титульного листа}
-	\label{SPDS_TIT_LIST_without_tagname}
+    \caption{Форма 13. Заполнение граф титульного листа.\label{SPDS_TIT_LIST_without_tagname}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{SPDS_TIT_LIST_with_tagname}
-	\caption{Форма 13. Соответствующие теги в графах титульного листа}
-	\label{SPDS_TIT_LIST_with_tagname}
+    \caption{Форма 13. Соответствующие теги в графах титульного листа.\label{SPDS_TIT_LIST_with_tagname}}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{SPDS_EMPTY}
-	\caption{Список тегов шаблона без основной надписи}
-	\label{SPDS_EMPTY}
+    \caption{Список тегов шаблона без основной надписи.\label{SPDS_EMPTY}}
 \end{figure}
 
 \end{document}
